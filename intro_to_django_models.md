@@ -1,6 +1,13 @@
 # Introduction to Django Models
 
-Django models are Python classes that map to database tables. You define fields as class attributes, and Django handles the SQL behind the scenes.
+## Navigation
+- [1. Defining a Model](#1-defining-a-model)
+- [2. Common Field Types](#2-common-field-types)
+- [3. Applying Model Changes](#3-applying-model-changes)
+- [4. Registering in Admin](#4-registering-in-admin)
+- [5. Querying the Database](#5-querying-the-database)
+- [6. Model Methods & Meta](#6-model-methods--meta)
+- [7. Custom User Model & Manager](#7-custom-user-model--manager)
 
 ## 1. Defining a Model
 
@@ -126,6 +133,31 @@ has_posts = Post.objects.filter(author=user).exists()
 # count total records
 total_posts = Post.objects.count()
 ```
+
+### Lookup Expressions
+Django uses `field__lookup=value` syntax to filter by operators or transformations.  
+Common lookups include:
+
+- exact / iexact        → field__exact="abc", field__iexact="ABC"  
+- contains / icontains  → field__contains="foo", field__icontains="Foo"  
+- startswith / istartswith  
+- endswith / iendswith  
+- in                    → field__in=[1,2,3]  
+- gt / gte / lt / lte   → published__lt='2022-01-01', price__gte=10  
+- range                 → date__range=['2023-01-01','2023-12-31']  
+- isnull                → field__isnull=True  
+- year / month / day    → published__year=2023, date__month=12  
+- week_day / hour / minute / second  
+
+Examples:  
+```python
+Post.objects.filter(published__year=2023)  
+Post.objects.filter(title__startswith='Hello')  
+Post.objects.filter(id__in=[1,2,3])  
+```
+
+**Reference:**  
+Full list of field lookups → https://docs.djangoproject.com/en/stable/ref/models/querysets/#field-lookups
 
 ## 6. Model Methods & Meta
 - Define custom methods inside your model.  

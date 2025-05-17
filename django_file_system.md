@@ -1,5 +1,12 @@
 # Django Project File System Overview
 
+## Navigation
+- [Default Project Structure](#default-project-structure)
+- [Top-Level Files](#top-level-files)
+- [Project Package (`mysite/`)](#project-package-mysite)
+- [Apps](#apps)
+- [Other Common Folders](#other-common-folders)
+
 ## Default Project Structure
 
 When you run `django-admin startproject mysite`, Django creates the following structure:
@@ -66,7 +73,11 @@ blog/
   Request handlers (logic).
 
 • tests.py  
-  Unit tests for this app.
+  Unit tests for this app.  
+  - Create test cases by subclassing `django.test.TestCase`  
+  - Run `python manage.py test` to discover and execute tests  
+  - Use `self.client` to simulate HTTP requests and assertion methods (`assertEqual`, `assertContains`, etc.) to verify behavior  
+  - Validate models, views, forms, URLs and catch regressions early
 
 ## Other Common Folders
 

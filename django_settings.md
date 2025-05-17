@@ -1,6 +1,20 @@
 # Django settings.py Deep Dive
 
-The `settings.py` file holds all the configuration for your Django project. Below are its most important sections:
+## Navigation
+- [1. BASE_DIR](#1-base_dir)
+- [2. SECRET_KEY](#2-secret_key)
+- [3. DEBUG](#3-debug)
+- [4. ALLOWED_HOSTS](#4-allowed_hosts)
+- [5. INSTALLED_APPS](#5-installed_apps)
+- [6. MIDDLEWARE](#6-middleware)
+- [7. ROOT_URLCONF](#7-root_urlconf)
+- [8. TEMPLATES](#8-templates)
+- [9. WSGI_APPLICATION](#9-wsgi_application)
+- [10. DATABASES](#10-databases)
+- [11. AUTH_PASSWORD_VALIDATORS](#11-auth_password_validators)
+- [12. INTERNATIONALIZATION](#12-internationalization)
+- [13. STATIC & MEDIA FILES](#13-static--media-files)
+- [14. Docker Environment](#14-docker-environment)
 
 ## 1. BASE_DIR
 Defines the project’s root directory.

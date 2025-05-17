@@ -1,6 +1,18 @@
 # Introduction to Django
 
-Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It handles much of the hassle of web development so you can focus on writing your app without needing to reinvent the wheel.
+## Navigation
+- [Prerequisites](#prerequisites)
+- [1. Create a Virtual Environment](#1-create-a-virtual-environment)
+- [2. Install Django](#2-install-django)
+- [3. Start a New Project](#3-start-a-new-project)
+- [4. Run the Development Server](#4-run-the-development-server)
+- [5. Create a New App](#5-create-a-new-app)
+- [6. Apply Migrations](#6-apply-migrations)
+- [What are Migrations?](#what-are-migrations)
+- [7. Use the Admin Site](#7-use-the-admin-site)
+- [8. Types of Views](#8-types-of-views)
+- [9. Serving Static Files](#9-serving-static-files)
+- [Next Steps](#next-steps)
 
 ## Prerequisites
 - Python 3.8+
